@@ -43,6 +43,10 @@ public class MainCreatures extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+        SecondLister = new javax.swing.JPopupMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jScrollPane1 = new javax.swing.JScrollPane();
         md_lalista = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -129,6 +133,41 @@ public class MainCreatures extends javax.swing.JFrame {
         });
         AGMODEL.add(jMenuItem5);
 
+        jMenuItem6.setText("Agregar");
+        jMenuItem6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem6MouseClicked(evt);
+            }
+        });
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        SecondLister.add(jMenuItem6);
+
+        jMenuItem7.setText("Modificar");
+        jMenuItem7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem7MouseClicked(evt);
+            }
+        });
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        SecondLister.add(jMenuItem7);
+
+        jMenuItem8.setText("Eliminar");
+        jMenuItem8.setToolTipText("");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        SecondLister.add(jMenuItem8);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         md_lalista.setBorder(new javax.swing.border.MatteBorder(null));
@@ -142,6 +181,11 @@ public class MainCreatures extends javax.swing.JFrame {
 
         c_lalista.setBorder(new javax.swing.border.MatteBorder(null));
         c_lalista.setModel(new DefaultListModel());
+        c_lalista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c_lalistaMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(c_lalista);
 
         UniversalTree.setBorder(new javax.swing.border.MatteBorder(null));
@@ -580,6 +624,45 @@ public class MainCreatures extends javax.swing.JFrame {
         Modelo.addElement(  new MundoDisco(name, edad)  );
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
+    private void c_lalistaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c_lalistaMouseClicked
+        // TODO add your handling code here:
+         if(evt.isMetaDown()){
+            SecondLister.show(evt.getComponent(),evt.getX(), evt.getY() ); 
+        }
+    }//GEN-LAST:event_c_lalistaMouseClicked
+
+    private void jMenuItem7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem7MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jMenuItem7MouseClicked
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Favor Use los bonitos textfields de arriba");
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem6MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jMenuItem6MouseClicked
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        
+        DefaultListModel Modelo = (DefaultListModel) c_lalista.getModel();
+        Modelo.remove(c_lalista.getSelectedIndex() );   
+        
+        
+        
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+        c_lalista.getSelectedIndex();
+        DefaultListModel Modelo = (DefaultListModel) c_lalista.getModel();
+        Modelo.remove(   c_lalista.getSelectedIndex() );
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -618,6 +701,7 @@ public class MainCreatures extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPopupMenu AGMODEL;
     private javax.swing.JPopupMenu Menu_popup;
+    private javax.swing.JPopupMenu SecondLister;
     private javax.swing.JTree UniversalTree;
     private java.awt.Button button1;
     private java.awt.Button button2;
@@ -635,6 +719,9 @@ public class MainCreatures extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
