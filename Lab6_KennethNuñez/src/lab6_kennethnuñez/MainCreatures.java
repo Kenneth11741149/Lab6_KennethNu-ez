@@ -667,7 +667,7 @@ public class MainCreatures extends javax.swing.JFrame {
 
     private void button5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button5MouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "Codigo: "+One.getUniversoCode()+"La edad del universo es: "+One.getUniverseAge()+"El peso del universo es: "+One.getPeso());
+        JOptionPane.showMessageDialog(this, "Codigo: "+One.getUniversoCode()+" La edad del universo es: "+One.getUniverseAge()+" El peso del universo es: "+One.getPeso());
                 
     }//GEN-LAST:event_button5MouseClicked
 
