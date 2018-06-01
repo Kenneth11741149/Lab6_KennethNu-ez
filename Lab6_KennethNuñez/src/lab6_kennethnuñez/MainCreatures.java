@@ -5,6 +5,7 @@
  */
 package lab6_kennethnuñez;
 
+import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -203,7 +204,7 @@ public class MainCreatures extends javax.swing.JFrame {
         label7.setName(""); // NOI18N
         label7.setText("Nombre de Raza");
 
-        label8.setText("Numero de Energia");
+        label8.setText("Peso");
 
         label9.setText("Numero Maximo de Años");
 
@@ -266,6 +267,11 @@ public class MainCreatures extends javax.swing.JFrame {
         label5.setText("Funciona el click derecho en las criaturas");
 
         button5.setLabel("See properties");
+        button5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -445,7 +451,7 @@ public class MainCreatures extends javax.swing.JFrame {
          md_lalista.setModel(MD);
          md_TurtleName.setText("");
          md_TurtleWeight.setText("");
-         
+         pesotortug+=peso;
         }catch (Exception e){
            JOptionPane.showMessageDialog(this, "Numeros Enteros solamente. ");
         }
@@ -476,6 +482,8 @@ public class MainCreatures extends javax.swing.JFrame {
         c_MaxYears.setText("");
         c_RegionName.setText("");
         c_AliveSpecies.setText("");
+        Peso+=EnergyNumber;
+        Criaturas++;
         }catch(Exception e){
             JOptionPane.showMessageDialog(this, "Numeros Enteros solamente. ");
         }
@@ -490,6 +498,7 @@ public class MainCreatures extends javax.swing.JFrame {
         One.setUniverseAge(y);
         u_UniverseCode.setText("");
         u_UniverseAge.setText("");
+        One.setPeso((Criaturas*Peso + pesotortug));
         }catch(Exception e){
             JOptionPane.showMessageDialog(this, "Inserte solamente numeros. ");
         }
@@ -532,18 +541,11 @@ public class MainCreatures extends javax.swing.JFrame {
              z.remove(c_lalista.getSelectedIndex());
              
             
-        } else if(c_lalista.getSelectedIndex() >= 0){
-            DefaultTreeModel Yesn = (DefaultTreeModel) UniversalTree.getSelectionModel();
-            DefaultMutableTreeNode nosn = (DefaultMutableTreeNode) Yesn.getRoot();
-            
-            DefaultListModel Lister = (DefaultListModel) c_lalista.getModel();
-            Criaturas Rey = (Criaturas) Lister.get(c_lalista.getSelectedIndex());
-            DefaultMutableTreeNode hesn = new DefaultMutableTreeNode(Rey);
-            nosn.add(hesn);
-            Yesn.reload();
-        }else {
+        } else {
             JOptionPane.showMessageDialog(this, "SELECCIONE ALGO EN AMBOS");
         }
+        
+        
     }//GEN-LAST:event_button4MouseClicked
 
     private void UniversalTreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UniversalTreeMouseClicked
@@ -663,6 +665,12 @@ public class MainCreatures extends javax.swing.JFrame {
         Modelo.remove(   c_lalista.getSelectedIndex() );
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
+    private void button5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button5MouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Codigo: "+One.getUniversoCode()+"La edad del universo es: "+One.getUniverseAge()+"El peso del universo es: "+One.getPeso());
+                
+    }//GEN-LAST:event_button5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -747,4 +755,8 @@ public class MainCreatures extends javax.swing.JFrame {
     Universo One;
     DefaultMutableTreeNode nodo_seleccionado;
     Criaturas criaturas_seleccionada;
+    int Criaturas = 0;
+    int Peso = 0;
+    int pesotortug = 0;
+    
 }

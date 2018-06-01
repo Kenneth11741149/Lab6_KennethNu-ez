@@ -430,7 +430,7 @@
     </Component>
     <Component class="java.awt.Label" name="label8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Numero de Energia"/>
+        <Property name="text" type="java.lang.String" value="Peso"/>
       </Properties>
     </Component>
     <Component class="java.awt.Label" name="label9">
@@ -551,6 +551,9 @@
       <Properties>
         <Property name="label" type="java.lang.String" value="See properties"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button5MouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

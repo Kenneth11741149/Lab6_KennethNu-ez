@@ -3,7 +3,7 @@ package lab6_kennethnuñez;
 public class Universo {
     private String UniversoCode;
     private int UniverseAge;
-    private int peso;
+    private double peso;
 
     public Universo() {
     }
@@ -30,7 +30,7 @@ public class Universo {
         this.UniverseAge = UniverseAge;
     }
 
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
