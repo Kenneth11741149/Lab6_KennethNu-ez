@@ -23,6 +23,47 @@ public class Criaturas {
         this.AliveSpecies = AliveSpecies;
     }
 
+    public String getRazaName() {
+        return RazaName;
+    }
+
+    public void setRazaName(String RazaName) {
+        this.RazaName = RazaName;
+    }
+
+    public int getEnergyNumber() {
+        return EnergyNumber;
+    }
+
+    public void setEnergyNumber(int EnergyNumber) {
+        this.EnergyNumber = EnergyNumber;
+    }
+
+    public int getMaxYear() {
+        return MaxYear;
+    }
+
+    public void setMaxYear(int MaxYear) {
+        this.MaxYear = MaxYear;
+    }
+
+    public String getRegionName() {
+        return RegionName;
+    }
+
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
+    }
+
+    public int getAliveSpecies() {
+        return AliveSpecies;
+    }
+
+    public void setAliveSpecies(int AliveSpecies) {
+        this.AliveSpecies = AliveSpecies;
+    }
+
+    
     @Override
     public String toString() {
         return RazaName;
