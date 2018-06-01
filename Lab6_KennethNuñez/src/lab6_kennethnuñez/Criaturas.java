@@ -9,6 +9,25 @@ public class Criaturas {
     private int MaxYear;
     private String RegionName;
     private int AliveSpecies;
-    private ArrayList Objetos = new ArrayList() ;
+
+    public Criaturas() {
+    }
+    
+    
+
+    public Criaturas(String RazaName, int EnergyNumber, int MaxYear, String RegionName, int AliveSpecies) {
+        this.RazaName = RazaName;
+        this.EnergyNumber = EnergyNumber;
+        this.MaxYear = MaxYear;
+        this.RegionName = RegionName;
+        this.AliveSpecies = AliveSpecies;
+    }
+
+    @Override
+    public String toString() {
+        return RazaName;
+    }
+    
+    
     
 }

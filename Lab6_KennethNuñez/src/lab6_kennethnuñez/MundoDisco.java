@@ -12,6 +12,11 @@ public class MundoDisco {
         this.name = name;
         this.peso = peso;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
     
     
 }
